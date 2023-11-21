@@ -1,19 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selector de amigos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- Hoja de estilo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Selector de amigos</h1>
     <main>
-    <div class="container">
-        <h2>Amigo seleccionado: <span class="amigo">Amigo seleccionado</span></h2>
+      <!-- Seccion de ingreso de nombres -->
+      <section class="section-center">
+        <!-- form  -->
+        <form class="grocery-form">
+          <p class="alert">Se activó un botón</p>
+          <h3>Ingrese los nombres</h3>
+          <div class="form-control">
+            <input type="text" id="grocery" placeholder="ej:Federico" />
+            <button type="submit" class="submit-btn">Agregar</button>
+          </div>
+        </form>
+        <!-- list -->
+        <div class="grocery-container">
+          <div class="grocery-list">
+            <article class="grocery-item">
+              <p class="title">Federico</p>
+              <div class="btn-container">
+                <button type="button" class="edit-btn">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" class="delete-btn">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- Boton -->
+          <button type="button" class="clear-btn">Limpiar todo</button>
+        </div>
+      </section>
+
+      <!-- Sorteador de amigos -->
+      <div class="contenedor">
+        <h2>
+          Amigo seleccionado: <span class="amigo">Amigo seleccionado</span>
+        </h2>
         <button class="btn" id="btn">Cambiar</button>
       </div>
     </main>
-</body>
-<script src="index.js"></script>
+  </body>
+  <script src="index.js"></script>
 </html>

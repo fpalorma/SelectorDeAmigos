@@ -1,5 +1,6 @@
 *{
     margin:0;
+    padding:0;
 }
 
 body{
@@ -9,7 +10,7 @@ body{
     justify-content: space-around;
     background-color: grey;
 }
-.container{
+.contenedor{
     display:flex;
     flex-direction: column;
     margin-top: 20px;
@@ -25,6 +26,7 @@ h1{
     color:rgb(0, 0, 0);
     font-weight: bold;
     text-decoration:underline;
+    margin-top: 2rem;
 }
 h2{
     font-family:monospace;
@@ -45,8 +47,15 @@ h2{
     font-weight: 700;
     width:fit-content;
     font-size: 1rem;
-    
+    margin-top:1rem;
 }
 .btn:hover{
     background-color: aliceblue;
 }
+
+/******* Ingreso de nombres ********/
+
+
+
+
+
