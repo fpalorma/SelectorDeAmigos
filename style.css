@@ -39,23 +39,145 @@ h2{
     color:linen;
 }
 .btn{
-    background-color: rgb(76, 126, 225);
-    padding:5px;
-    border:none;
-    cursor:pointer;
-    border-radius: 5px;
-    font-weight: 700;
-    width:fit-content;
-    font-size: 1rem;
-    margin-top:1rem;
+    background: rgb(76, 126, 225);
+    border-color: blue;
+    flex: 0 0 2rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 0.85rem;
 }
-.btn:hover{
-    background-color: aliceblue;
-}
+
 
 /******* Ingreso de nombres ********/
 
+.section-center{
+    text-align: center;
+    padding:2rem;
+    background-color: gray;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+    .section-center {
+      width: 95vw;
+    }
+  }
 
+.grocery-form h3{
+    margin-bottom: 1rem;
+    
+}
 
+.alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    
+    text-transform: capitalize;
+  }
 
+  .alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+  }
+  .alert-success {
+    color: #155724;
+    background: #d4edda;
+  }
 
+  .form-control {
+    display: flex;
+    justify-content: center;
+  }
+
+  #grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: white;
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: black;
+    margin-right:2px;
+  }
+
+  .submit-btn {
+    background: rgb(76, 126, 225);
+    border-color: blue;
+    flex: 0 0 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  .grocery-container {
+    margin-top: 2rem;
+    visibility: hidden;
+  }
+  .show-container {
+    visibility: visible;
+  }
+  .grocery-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 1rem;
+    text-transform: capitalize;
+    background-color: rgb(157, 157, 157);
+    border-radius: 30px;
+  }
+
+  .title {
+    margin-bottom: 0;
+    color: black;
+    letter-spacing: 2px;
+  }
+  .edit-btn,
+  .delete-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+    transition: var(--transition);
+  }
+  .edit-btn {
+    color: rgb(13, 133, 13);
+  }
+  .delete-btn{
+    color:rgb(230, 16, 16);
+  }
+
+  .clear-btn {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background:pink;
+    border-color: transparent;
+    color:rgb(129, 7, 7);
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    font-family: monospace;
+  }
