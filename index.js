@@ -200,16 +200,20 @@ function createListItem(id, value) {
 
 
 // SORTEADOR DE AMIGOS
-const nombresDeAmigos = getLocalStorage()
-const listaDeAmigos = nombresDeAmigos.map(function(item){
-    return item.value
-})
-console.log(listaDeAmigos);
+
+
 
 const btn = document.getElementById("btn");
 const amigo = document.querySelector(".amigo");
 
 btn.addEventListener("click", function () {
+    function getRandomNumber() {
+        return Math.floor(Math.random() * listaDeAmigos.length);
+    }
+    let nombresDeAmigos = getLocalStorage();
+    let listaDeAmigos = nombresDeAmigos.map(function(item){
+        return item.value
+    });
     //Queremos obtener un numero random entre 0 y 5
     const randomNumber = getRandomNumber();
     console.log(randomNumber);
@@ -217,7 +221,4 @@ btn.addEventListener("click", function () {
     amigo.textContent = listaDeAmigos[randomNumber]
 })
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * listaDeAmigos.length);
-}
 
