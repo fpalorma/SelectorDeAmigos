@@ -68,7 +68,7 @@ function clearItems() {
         })
     }
     container.classList.remove("show-container");
-    displayAlert("Se eliminaron todos los nombres de la lista", "danger");
+    displayAlert("Se eliminaron todos los nombres", "danger");
     setBackToDefault();
     localStorage.removeItem("list");
 };
