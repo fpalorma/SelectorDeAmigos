@@ -6,7 +6,7 @@ const form = document.querySelector(".names-form")
 const names = document.getElementById("names")
 const submitBtn = document.querySelector(".submit-btn")
 const container = document.querySelector(".names-container")
-const list = document.querySelector(".names-list")
+const lista = document.querySelector(".names-list")
 const clearBtn = document.querySelector(".clear-btn")
 //edit option
 let editElement;
@@ -64,13 +64,13 @@ function clearItems() {
     const items = document.querySelectorAll(".names-item");
     if (items.length > 0) {
         items.forEach(function (item) {
-            list.removeChild(item)
+            lista.removeChild(item)
         })
     }
     container.classList.remove("show-container");
     displayAlert("Se eliminaron todos los nombres", "danger");
     setBackToDefault();
-    localStorage.removeItem("list");
+    localStorage.removeItem("lista");
 };
 //edit function
 function editItem(e) {
@@ -87,8 +87,8 @@ function editItem(e) {
 function deleteItem(e) {
     const element = e.currentTarget.parentElement.parentElement;
     const id = element.dataset.id;
-    list.removeChild(element);
-    if (list.children.length === 0) {
+    lista.removeChild(element);
+    if (lista.children.length === 0) {
         container.classList.remove("show-container")
     }
     displayAlert("nombre eliminado", "danger");
@@ -113,7 +113,7 @@ function addToLocalStorage(id, value) {
     let items = getLocalStorage()
     console.log(items);
     items.push(names);
-    localStorage.setItem("list", JSON.stringify(items));
+    localStorage.setItem("lista", JSON.stringify(items));
 };
 
 function removeFromLocalStorage(id) {
@@ -123,7 +123,7 @@ function removeFromLocalStorage(id) {
             return item
         }
     })
-    localStorage.setItem("list", JSON.stringify(items));
+    localStorage.setItem("lista", JSON.stringify(items));
 
 }
 
@@ -135,12 +135,12 @@ function editLocalStorage(id, value) {
         }
         return item;
     })
-    localStorage.setItem("list", JSON.stringify(items));
+    localStorage.setItem("lista", JSON.stringify(items));
 }
 
 function getLocalStorage() {
-    return localStorage.getItem("list")
-        ? JSON.parse(localStorage.getItem("list"))
+    return localStorage.getItem("lista")
+        ? JSON.parse(localStorage.getItem("lista"))
         : [];
 }
 //localStorageAPI
@@ -153,7 +153,7 @@ function setupItems() {
     let items = getLocalStorage();
     if (items.length > 0) {
         items.forEach(function (item) {
-            createListItem(item.id, item.value)
+            createlistItem(item.id, item.value)
         })
         container.classList.add("show-container")
     }
@@ -180,7 +180,7 @@ function createListItem(id, value) {
     deleteBtn.addEventListener("click", deleteItem);
     editBtn.addEventListener("click", editItem)
     //append child
-    list.appendChild(element);
+    lista.appendChild(element);
 }
 
 //FIN Ingreso de nombres
