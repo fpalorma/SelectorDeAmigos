@@ -153,7 +153,7 @@ function setupItems() {
     let items = getLocalStorage();
     if (items.length > 0) {
         items.forEach(function (item) {
-            createlistItem(item.id, item.value)
+            createListItem(item.id, item.value)
         })
         container.classList.add("show-container")
     }
